@@ -1,6 +1,6 @@
-package com.msatest.userService.user.service;
+package com.msatest.userService.users.service;
 
-import com.msatest.userService.user.dto.UserDto;
+import com.msatest.userService.users.dto.UserDto;
 
 import java.util.List;
 

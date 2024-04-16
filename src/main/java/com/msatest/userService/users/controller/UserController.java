@@ -1,7 +1,7 @@
-package com.msatest.userService.user.controller;
+package com.msatest.userService.users.controller;
 
-import com.msatest.userService.user.dto.UserDto;
-import com.msatest.userService.user.service.UserService;
+import com.msatest.userService.users.dto.UserDto;
+import com.msatest.userService.users.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

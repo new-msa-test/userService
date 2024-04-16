@@ -1,13 +1,11 @@
-package com.msatest.userService.user.service;
+package com.msatest.userService.users.service;
 
-import com.msatest.userService.user.dto.UserDto;
-import com.msatest.userService.user.model.Users;
-import com.msatest.userService.user.repository.UserRepository;
+import com.msatest.userService.users.dto.UserDto;
+import com.msatest.userService.users.model.Users;
+import com.msatest.userService.users.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 
-import java.rmi.NoSuchObjectException;
 import java.util.List;
 
 @Service

@@ -1,4 +1,4 @@
-package com.msatest.userService.user.model;
+package com.msatest.userService.users.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

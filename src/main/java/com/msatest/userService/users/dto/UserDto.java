@@ -1,6 +1,6 @@
-package com.msatest.userService.user.dto;
+package com.msatest.userService.users.dto;
 
-import com.msatest.userService.user.model.Users;
+import com.msatest.userService.users.model.Users;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
