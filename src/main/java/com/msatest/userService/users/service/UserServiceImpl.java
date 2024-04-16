@@ -21,8 +21,8 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public UserDto getUserById(Long userId) {
-        Users user = userRepository.findById(userId).orElseThrow(
-                () -> new RuntimeException("User not found"));
+        Users user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
         return UserDto.toDto(user);
     }
 
