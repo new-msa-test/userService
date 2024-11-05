@@ -4,6 +4,7 @@ import com.msatest.userService.users.dto.UserDto;
 import com.msatest.userService.users.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,10 +12,11 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/user-service/users")
+@RequestMapping("/users")
 public class UserController {
 
     private final UserService userService;
+    private final Environment env;
 
     @GetMapping("/test")
     public String test(HttpServletRequest request) {
@@ -39,5 +41,10 @@ public class UserController {
     public ResponseEntity<List<UserDto>> getAllUsers() {
 
         return ResponseEntity.ok(userService.getAllUsers());
+    }
+
+    @GetMapping("/health_check")
+    public String healthCheck() {
+        return "User Service is up and running - env : " + env.getProperty("token.expriation_time") + env.getProperty("dbpassword");
     }
 }

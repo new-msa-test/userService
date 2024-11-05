@@ -1,12 +1,12 @@
 server:
-  port: 0
+  port: 9091
 
 spring:
   application:
     name: user-service
 
   datasource:
-    url: jdbc:mysql://localhost:3307/msa_user
+    url: jdbc:mysql://localhost:3311/msa_user
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -26,3 +26,15 @@ eureka:
         defaultZone: http://localhost:8761/eureka/
     instance:
         instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+#springdoc:
+#  api-docs:
+#    path: /v3/api-docs
+#  swagger-ui:
+#    path: /swagger-ui/index.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
